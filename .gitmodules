@@ -1,0 +1,6 @@
+[submodule "interface"]
+	path = interface
+	url = https://github.com/alphatwirl/alphatwirl-interface.git
+[submodule "alphatwirl"]
+	path = alphatwirl
+	url = https://github.com/alphatwirl/alphatwirl.git
