@@ -109,3 +109,6 @@ ENV/
 
 # Vagrant
 .vagrant
+
+# ROOT files
+*.root
