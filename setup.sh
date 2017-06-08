@@ -1,2 +1,9 @@
-TopLevelDir="$(dirname "$(readlink -f "$BASH_SOURCE[0]")")"
-export PYTHONPATH="${TopLevelDir}${PYTHONPATH+:$PYTHONPATH}"
+#!/bin/bash
+
+EXAMPLES_ROOT="$(dirname "$(readlink -f "$BASH_SOURCE[0]")")"
+EXTERNALS=${EXAMPLES_ROOT}/external
+
+ALPHATWIRL=${EXTERNALS}/alphatwirl
+ALPHATWIRL_INTERFACE=${EXTERNALS}/alphatwirl_interface
+
+export PYTHONPATH="${ALPHATWIRL}:${ALPHATWIRL_INTERFACE}:${PYTHONPATH}"
