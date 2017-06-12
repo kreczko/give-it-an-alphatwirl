@@ -1,4 +1,4 @@
-# ntuple2pandas
+# ntuple2categories
 
 This example uses data from the [CMS HEP Tutorial](http://opendata.cern.ch/record/203)
 (data format is described in the [tutorial documentation, chapter 3](http://opendata.cern.ch/record/50/files/TutorialDocu_3.pdf)).
