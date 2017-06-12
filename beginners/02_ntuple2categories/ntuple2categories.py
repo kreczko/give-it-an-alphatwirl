@@ -3,13 +3,9 @@ import os
 import ROOT
 import alphatwirl as at
 from alphatwirl_interface import Tree, Table
+from data import get_test_data
 
-input_file = 'data.root'
-tree_name = 'events'
-
-if not os.path.exists(input_file):
-    import wget
-    wget.download('http://opendata.cern.ch/record/203/files/data.root')
+input_file, tree_name = get_test_data()
 
 input_file = ROOT.TFile.Open(input_file)
 tree = Tree(input_file.Get(tree_name))

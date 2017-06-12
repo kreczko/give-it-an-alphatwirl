@@ -2,13 +2,9 @@
 import os
 import root_numpy as rnp
 import pandas as pd
+from data import get_test_data
 
-input_file = 'data.root'
-tree_name = 'events'
-
-if not os.path.exists(input_file):
-    import wget
-    wget.download('http://opendata.cern.ch/record/203/files/data.root')
+input_file, tree_name = get_test_data()
 
 branches = ['NJet', 'NMuon', 'NElectron', 'Muon_Px', 'Muon_Py']
 arr = rnp.root2array(input_file, tree_name, branches=branches)
