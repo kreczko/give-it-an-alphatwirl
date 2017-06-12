@@ -19,10 +19,12 @@ Binning = at.binning.Binning
 muon_bins = [-1000, -100, -30, -10, 0, 10, 30,  100, 1000]
 
 tables = [
+# adding 1D table binned in 'Jet_Px'(logarithmic, rounded bins)
     Table(
         input_values=('Jet_Px',),
         bins=(RoundLog(1, 100), ),
     ),
+# adding 2D table binned in Muon_Px and Muon_Py
     Table(
         input_values=('Muon_Px', 'Muon_Py'),
         # same binning for Px and Py
