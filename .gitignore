@@ -112,3 +112,5 @@ ENV/
 
 # ROOT files
 *.root
+
+output

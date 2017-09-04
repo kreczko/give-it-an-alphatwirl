@@ -7,3 +7,5 @@ source ../../setup.sh
 if [ -f requirements.txt ]; then
   pip install --user -r requirements.txt
 fi
+
+mkdir -p output
