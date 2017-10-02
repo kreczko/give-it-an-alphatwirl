@@ -8,8 +8,11 @@ ALPHATWIRL=${EXTERNALS}/alphatwirl
 ALPHATWIRL_INTERFACE=${EXTERNALS}/alphatwirl_interface
 LOCAL=${HOME}/.local/lib/python2.7/site-packages
 
-echo "Using ROOT, GEANT, pandas etc from CVMFS"
-source /cvmfs/sft.cern.ch/lcg/views/LCG_86/x86_64-slc6-gcc49-opt/setup.sh
+if [[ -z "${NO_CVMFS}" ]]
+then
+  echo "Using ROOT, GEANT, pandas etc from CVMFS"
+  source /cvmfs/sft.cern.ch/lcg/views/LCG_86/x86_64-slc6-gcc49-opt/setup.sh
+fi
 
 PYTHONPATH="${ALPHATWIRL_INTERFACE}:${LOCAL}:${PYTHONPATH}"
 export PYTHONPATH="${EXAMPLES_ROOT}:${ALPHATWIRL}:${PYTHONPATH}"
