@@ -29,6 +29,15 @@ E.g. on OS X/other Linux/Windows
   cd <example you are interested in>
   ```
 
+# With Docker
+```
+# pip install --user docker-compose
+docker-compose up -d
+docker exec -ti  giveitanalphatwirl_analysis-box_1 cdw
+cd <example you are interested in>
+python run.py
+```
+
 # Using the examples
 
 (To be written)

@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /code
+export NO_CVMFS=1
+export PYTHONPATH=/usr/local/lib/root
+source setup.sh
+stty rows 256 cols 256
+bash
